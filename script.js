@@ -40,6 +40,9 @@ let difficulty = "easy";
 let history = [];
 let gameActive = false;
 
+// GROQ 
+const GROQ_API_KEY = "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";
+
 // START GAME
 startGame.addEventListener("click", () => {
     category = categorySelect.value;
