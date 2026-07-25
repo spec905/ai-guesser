@@ -16,3 +16,5 @@ Failed	💀	0
 HTML / CSS / JavaScript /Groq API (for the ai answer)
 # installation
 No installation needed just use it in a browser https://spec905.github.io/ai-guesser/
+# Running locally
+This is a  site no dependencies to install
