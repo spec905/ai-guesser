@@ -14,3 +14,5 @@ Guess anytime by clicking on the Guess button
 Failed	💀	0
 # tech used
 HTML / CSS / JavaScript /Groq API (for the ai answer)
+
+No installation needed just use it in a browser https://spec905.github.io/ai-guesser/
