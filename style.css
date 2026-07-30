@@ -8,13 +8,11 @@
 
 body {
     font-family: 'Poppins', Arial, sans-serif;
-    background: #111827;
+    background: #4d5b79;
     color: white;
     min-height: 100vh;
 }
-
 /* ---------- BACKGROUND ---------- */
-
 .background {
     position: fixed;
     inset: 0;

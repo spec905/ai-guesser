@@ -40,8 +40,8 @@ let difficulty = "easy";
 let history = [];
 let gameActive = false;
 
-// GROQ 
-const GROQ_API_KEY = "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";
+// NOTE: no API key here anymore — it lives in Vercel's Environment Variables
+// and is used server-side inside api/ai.js only.
 
 // START GAME
 startGame.addEventListener("click", () => {
@@ -240,16 +240,15 @@ function setInputsEnabled(enabled) {
     hintBtn.disabled = !enabled;
 }
 
-// ********************DIRECT GROQ CALL ***************
+// ********************CALL OUR OWN BACKEND (Vercel function) ***************
 async function callBackend(payload) {
     const systemPrompt = buildSystemPrompt(payload.category, payload.difficulty, payload.type);
     const messages = buildMessages(payload.history, payload.type, payload.message, systemPrompt);
 
-    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    const res = await fetch("/api/ai", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${GROQ_API_KEY}`
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
             model: "llama-3.3-70b-versatile",
@@ -282,7 +281,7 @@ function buildSystemPrompt(category, difficulty, type) {
 function buildMessages(history, type, message, systemPrompt) {
     const msgs = [{ role: "system", content: systemPrompt }];
     history.forEach(h => msgs.push(h));
-    
+
     let userMsg = message;
     if (type === "hint") userMsg = "Give one short hint.";
     if (type === "guess") userMsg = `Is the answer "${message}"? Reply exactly "CORRECT: yes" or "INCORRECT"`;
