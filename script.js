@@ -40,9 +40,6 @@ let difficulty = "easy";
 let history = [];
 let gameActive = false;
 
-// NOTE: no API key here anymore — it lives in Vercel's Environment Variables
-// and is used server-side inside api/ai.js only.
-
 // START GAME
 startGame.addEventListener("click", () => {
     category = categorySelect.value;
