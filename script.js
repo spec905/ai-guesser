@@ -237,7 +237,7 @@ function setInputsEnabled(enabled) {
     hintBtn.disabled = !enabled;
 }
 
-// ********************CALL OUR OWN BACKEND (Vercel function) ***************
+// ********************CALL Vercel 
 async function callBackend(payload) {
     const systemPrompt = buildSystemPrompt(payload.category, payload.difficulty, payload.type);
     const messages = buildMessages(payload.history, payload.type, payload.message, systemPrompt);
