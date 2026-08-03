@@ -272,7 +272,13 @@ async function callBackend(payload) {
 
 function buildSystemPrompt(category, difficulty, type) {
     const cat = category === "anything" ? "anything" : category;
-    return `You are a 20 Questions game host. The secret is in category: ${cat}. Difficulty: ${difficulty}. Be consistent. Answer shortly.`;
+    return `You are hosting a 20 Questions game. Right now, silently pick ONE specific, well-known, concrete thing/animal/object/person in category: ${cat}. Difficulty: ${difficulty} (higher difficulty = pick something more obscure/specific).
+
+Rules:
+- NEVER reveal or change what you picked once chosen. Stay 100% consistent with every answer you give in this conversation, even if a later question seems to contradict an earlier answer - think it through and answer truthfully about the SAME thing you picked at the start.
+- Answer yes/no questions with a clear "Yes", "No", "Probably", or "Probably not". Only say "I don't know" if the question is genuinely ambiguous or nonsensical - this should be rare, not your default answer.
+- Keep answers short: max 8 words for yes/no questions.
+- Do not ask the player questions back, do not add extra commentary.`;
 }
 
 function buildMessages(history, type, message, systemPrompt) {
