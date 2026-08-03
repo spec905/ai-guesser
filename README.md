@@ -20,7 +20,7 @@ Vercel serverless function (api/ai.js) to keep the API key private
 No installation needed just use it in a browser [https://spec905.github.io/ai-guesser/](https://ai-guesser-gbdthq4st-ai-guesser.vercel.app/)
 # how to set it up locally
 make sure that Node.js in installed
-download the repo
+download the repo https://github.com/spec905/ai-guesser.git
 in your code editor terminal type vercel dev
 choose the project file
 then " Pull development environment variables into .env.local?" write y
