@@ -1,4 +1,4 @@
-can u update it psss hhhh # ai-guesser
+# ai-guesser
 A 20 Questions style game ,the AI secretly thinks of something, and you try to guess it by asking up to 20 yes/no questions
 # How it works
 *Pick a category and a difficulty u want 
