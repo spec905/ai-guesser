@@ -18,3 +18,27 @@ Groq API (for the AI's answers)
 Vercel serverless function (api/ai.js) to keep the API key private
 # installation
 No installation needed just use it in a browser [https://spec905.github.io/ai-guesser/](https://ai-guesser-gbdthq4st-ai-guesser.vercel.app/)
+# how to set it up locally
+make sure that Node.js in installed
+download the repo
+in your code editor terminal type vercel dev
+choose the project file
+then " Pull development environment variables into .env.local?" write y
+this is how your terminal will looks like
+PS C:\Users\hp\Desktop\ai-guesser> vercel dev
+Vercel CLI 58.4.4 (Node.js 20.20.2)
+
+  Directory       ~\Desktop\ai-guesser
+
+  Team            ai-guesser
+? Which project? ai-guesser (linked by git)
+
+✓ Linked          ai-guesser/ai-guesser
+
+? Pull development environment variables into .env.local? yes
+> Downloading `development` environment variables for ai-guesser/ai-guesser
+
+✓ Created         .env.local file
+> Ready! Available at http://localhost:3000
+
+then just click on  http://localhost:3000
